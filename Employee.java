@@ -1,9 +1,6 @@
-
-
 public class Employee implements Tax{
     protected String name;
     protected double salary;
-    
     boolean isSalaryValid(double salary){
         if(salary>=0){
             return true;
@@ -43,7 +40,7 @@ public class Employee implements Tax{
         return this.salary;
     }
     public double getTakeHomePay(){
-        return this.salary;
+        return getSalary()-getTax();
     }
     
     public double getTax() {
