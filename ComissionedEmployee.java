@@ -1,7 +1,12 @@
 public class ComissionedEmployee extends Employee implements Tax{
     protected double comission;
- 
     
+    public ComissionedEmployee(String name,double salary,double comission){
+        this.name = name; 
+        this.salary = name;
+        this.comission =  comission;
+    }
+
     boolean isNilaiValid(double nilai){
         if(nilai>=0){
             return true;
@@ -25,10 +30,7 @@ public class ComissionedEmployee extends Employee implements Tax{
     public double getTakeHomePay(){
         return getSalary() + getComission() - getTax();
     }
-    public double getComissionEmployee(){
-        return getSalary() + this.comission;
-    }
     public double getTax() {
-        return getSalary()*0.1;
+        return (getSalary()+getComission())*0.1;
     }
 }
