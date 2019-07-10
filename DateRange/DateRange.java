@@ -16,7 +16,7 @@ public class DateRange implements Iterable<LocalDate>{
 			return true;
 		else if (date.begin.equals(begin) || date.end.equals(begin))
 			return true;
-		else if (date.begin.equals(end) || date.end.equals(end))
+		else if (date.begin.equals(end))
 			return true;
 		else 
 			return false;
